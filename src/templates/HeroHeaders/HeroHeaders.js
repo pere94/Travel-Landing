@@ -38,16 +38,13 @@ function HeroHeaders({ h1_title, imageHeader }) {
             </svg>
           </a>
         </div>
-        {/* <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"/>
-                    </div> */}
       </div>
       <div className="relative z-0 h-2 min-h-[500px]">
         <Image
           src={imageHeader}
           layout="fill"
           className="object-cover object-center"
-          priority
+          priority 
         />
       </div>
     </section>
