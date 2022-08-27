@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function HeroHeaders({ h1_title, imageHeader }) {
   return (
-    <section className="">
+    <header>
       <div
         className="absolute z-10 grid max-w-screen-xl px-4 sm:p-1 py-8 mx-auto 
             max-w-[320px] align-middle h-96 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
@@ -47,7 +47,7 @@ function HeroHeaders({ h1_title, imageHeader }) {
           priority 
         />
       </div>
-    </section>
+    </header>
   );
 }
 
