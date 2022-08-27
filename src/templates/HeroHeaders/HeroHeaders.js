@@ -21,7 +21,7 @@ function HeroHeaders({ h1_title, imageHeader }) {
             className="inline-flex shadow-simpleSh items-center justify-center px-10 py-3 mb-2 ml-3 
                 text-base font-medium text-center bg-white dark:bg-darkModeColor rounded-full 
                 text-primary-500 hover:bg-primary-50 dark:hover:bg-darkModeColorHover focus:ring-4 
-                focus:ring-primary-300 dark:focus:ring-primary-900"
+                focus:ring-primary-300 dark:focus:ring-primary-900 active:scale-95"
           >
             Get started
             <svg

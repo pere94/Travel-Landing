@@ -4,7 +4,9 @@ import Image from "next/image";
 function CardsCarrusel({ imgPlace, namePLace, descPlace, backgroundColor, textColor }) {
   return (
     <div className="shadow-simpleSh w-[220px] min-w-[220px] items-center gap-0 bg-gray-50 shadow flex flex-col dark:bg-gray-800 
-      dark:border-gray-700 mb-0 mr-4 rounded-2xl cursor-pointer hover:shadow-simpleSh+">
+      dark:border-gray-700 mb-0 mr-4 rounded-2xl cursor-pointer hover:shadow-simpleSh+ relative bottom-0 
+      transition ease-in-out hover:-translate-y-2 duration-300">
+        {/* transition ease-in-out hover:-translate-y-2 duration-300 */}
         <Image
           className="w-full rounded-t-2xl"
           src={imgPlace}
