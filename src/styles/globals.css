@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  min-width: 320px !important;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.overflowXScroll {
+  @apply overflow-x-scroll ;
+  scrollbar-width: thin;
+  scrollbar-color: light;
+  scrollbar-color: #CC2D4A #e0e0e0;
+}
+
+.overflowYScroll {
+  @apply overflow-y-scroll ;
+  scrollbar-width: thin;
+  scrollbar-color: light;
+  scrollbar-color: #CC2D4A #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: light;
+  scrollbar-color: #CC2D4A #e0e0e0;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(230, 230, 230);        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #CC2D4A;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: none;  /* creates padding around scroll thumb */
+}
+
+
+.navBarLink {
+  @apply ml-2 !important;
+}
+
+
+
+
+
+
+
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
