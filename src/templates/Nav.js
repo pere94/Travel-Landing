@@ -20,26 +20,30 @@ function Nav({navLinks}) {
 
   React.useEffect(() => {
     window.onscroll = () => {
+      const maxHeightScroll = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+      const currenHeightScroll = document.documentElement.scrollTop;
       const staysDespl = document.getElementById('stays').offsetTop; 
       const faqsDespl = document.getElementById('faqs').offsetTop; 
 
-      if (document.documentElement.scrollTop > staysDespl && document.documentElement.scrollTop < faqsDespl) {
+
+      if (currenHeightScroll > staysDespl && currenHeightScroll < faqsDespl) {
         setStaysPlace(true);
         setLocationPlace(false);
         setFaqsPlace(false);
         setAboutUs(false);
-      } else if (document.documentElement.scrollTop > faqsDespl && document.documentElement.scrollTop < 2600) {
+      } else if (currenHeightScroll > faqsDespl && !(currenHeightScroll + clientHeight + 20 > maxHeightScroll) ) {
         setFaqsPlace(true);
         setStaysPlace(false);
         setLocationPlace(false);
         setAboutUs(false);
-      } else if (document.documentElement.scrollTop > 2600) {
+      } else if (currenHeightScroll + clientHeight + 20 > maxHeightScroll) {
         setAboutUs(true);
         setFaqsPlace(false);
         setStaysPlace(false);
         setLocationPlace(false);
       } 
-      else if (document.documentElement.scrollTop > 0 && document.documentElement.scrollTop < staysDespl) {
+      else if (currenHeightScroll > 0 && currenHeightScroll < staysDespl) {
         setLocationPlace(true);
         setAboutUs(false);
         setFaqsPlace(false);

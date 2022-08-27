@@ -54,6 +54,30 @@ function Faqs() {
                 lacinia ipsum. Morbi varius tortor nibh, quis sagittis lectus euismod 
                 vitae."
           />
+
+          <CartFaqs
+            titleFaq='Lorem ipsum dolor sit amet"?'
+            descriptionFaq="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nullam iaculis ligula mi, et elementum nisl interdum id. Phasellus non 
+                lacinia ipsum. Morbi varius tortor nibh, quis sagittis lectus euismod 
+                vitae."
+          />
+
+          <CartFaqs
+            titleFaq='Lorem ipsum dolor sit amet"?'
+            descriptionFaq="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nullam iaculis ligula mi, et elementum nisl interdum id. Phasellus non 
+                lacinia ipsum. Morbi varius tortor nibh, quis sagittis lectus euismod 
+                vitae."
+          />
+
+          <CartFaqs
+            titleFaq='Lorem ipsum dolor sit amet"?'
+            descriptionFaq="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nullam iaculis ligula mi, et elementum nisl interdum id. Phasellus non 
+                lacinia ipsum. Morbi varius tortor nibh, quis sagittis lectus euismod 
+                vitae."
+          />
         </div>
       </div>
     </section>

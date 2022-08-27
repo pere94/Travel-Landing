@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
             'Locations',
             'Stays',
             'FAQs',
-            'About us',
+            'About Us',
           ]}
         />
         <Component {...pageProps} />
