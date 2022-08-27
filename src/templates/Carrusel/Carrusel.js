@@ -15,7 +15,7 @@ import sydney from "/src/img/sydney.jpg";
 
 function Carrusel() {
   return (
-    <section className="p-5 my-5 dark:bg-darkModeColor">
+    <section id="locations" className="p-5 my-5 dark:bg-darkModeColor">
       <h2 className="text-h2Size font-bold text-version1 ml-5 sm:ml-0">
         Our Recomendations
       </h2>

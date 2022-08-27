@@ -2,7 +2,7 @@ import { CartFaqs } from "/src/components/cartFaqs/cartFaqs";
 
 function Faqs() {
   return (
-    <section className="p-5 w-full">
+    <section id="faqs" className="p-5 w-full">
       <h2 className="ml-5 mb-5 text-h2Size text-version1 font-bold">FAQs</h2>
 
       <div className="flex justify-center items-center w-full ">

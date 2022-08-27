@@ -56,6 +56,10 @@ a {
   @apply ml-2 !important;
 }
 
+.navBarElementActive {
+  @apply bg-primary-700 text-white;
+}
+
 
 
 

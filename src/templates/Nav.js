@@ -8,14 +8,51 @@ import SwitchDarkMode from '../components/SwitchDarkMode/SwitchDarkMode';
 function Nav({navLinks}) {
   const [toggle, setToggle] = React.useState(true);
   const {darkMode, setDarkMode} = React.useContext(AppContext);
+  
+  const [locationPlace, setLocationPlace] = React.useState(true);
+  const [staysPlace, setStaysPlace] = React.useState(false);
+  const [faqsPlace, setFaqsPlace] = React.useState(false);
+  const [aboutUs, setAboutUs] = React.useState(false);
 
   const handleDarkModeSwitch = () => {
     setDarkMode(!darkMode);
   };
 
+  React.useEffect(() => {
+    window.onscroll = () => {
+      const staysDespl = document.getElementById('stays').offsetTop; 
+      const faqsDespl = document.getElementById('faqs').offsetTop; 
+
+      if (document.documentElement.scrollTop > staysDespl && document.documentElement.scrollTop < faqsDespl) {
+        setStaysPlace(true);
+        setLocationPlace(false);
+        setFaqsPlace(false);
+        setAboutUs(false);
+      } else if (document.documentElement.scrollTop > faqsDespl && document.documentElement.scrollTop < 2600) {
+        setFaqsPlace(true);
+        setStaysPlace(false);
+        setLocationPlace(false);
+        setAboutUs(false);
+      } else if (document.documentElement.scrollTop > 2600) {
+        setAboutUs(true);
+        setFaqsPlace(false);
+        setStaysPlace(false);
+        setLocationPlace(false);
+      } 
+      else if (document.documentElement.scrollTop > 0 && document.documentElement.scrollTop < staysDespl) {
+        setLocationPlace(true);
+        setAboutUs(false);
+        setFaqsPlace(false);
+        setStaysPlace(false);
+      }
+
+    };
+  }, []);
+
+
   return (
-    <nav className="bg-white border-gray-200 px-4 lg:px-6 py-0 lg:py-2 
-      dark:bg-gray-800">
+    <nav id="Nav" className="bg-white border-gray-200 px-4 lg:px-6 py-0 lg:py-2 
+      dark:bg-gray-800 fixed top-0 left-0 z-40 w-full">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
         <a href="https://flowbite.com" className="flex items-center">
           <MdTravelExplore className="w-9 h-9 text-version1" />
@@ -36,9 +73,13 @@ function Nav({navLinks}) {
             {navLinks.map(nameLink => (
               <li className="navBarLink" key={nameLink}>
                 <a
-                  href="#"
-                  className="block p-2 text-primary-700 rounded hover:bg-primary-700 
-                    lg:bg-transparent lg:text-primary-700 hover:text-white dark:text-white"
+                  href={`#${nameLink.toLowerCase().replace(' ', '-')}`}
+                  className={`block p-2 text-primary-700 rounded hover:bg-primary-700 
+                  ${locationPlace && nameLink == navLinks[0] ? 'navBarElementActive' : ""}
+                  ${staysPlace && nameLink == navLinks[1] ? 'navBarElementActive' : ""}
+                  ${faqsPlace && nameLink == navLinks[2] ? 'navBarElementActive' : ""}
+                  ${aboutUs && nameLink == navLinks[3] ? 'navBarElementActive' : ""}
+                  lg:bg-transparent lg:text-primary-700 hover:text-white dark:text-white`}
                   aria-current="page"
                 >
                   {nameLink}

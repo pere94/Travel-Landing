@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import {HeroHeaders} from "../templates/HeroHeaders/HeroHeaders";
 import {Carrusel} from "../templates/Carrusel/Carrusel";
-import {Faqs} from "../templates/Faqs/Faks";
+import {Faqs} from "../templates/Faqs/Faqs";
 import {Footer} from "../templates/Footer";
 
 import imageHeader from "../img/sanFranciscoDesktop.jpg";
@@ -20,6 +20,7 @@ export default function Home() {
   
   return (
     <main className="dark:bg-darkModeColor">
+
       <HeroHeaders 
         h1_title="Find More Locations like this"
         imageHeader={imageHeader}
@@ -27,8 +28,7 @@ export default function Home() {
 
       <Carrusel />
 
-      
-      <section className="mt-5 p-5 sm:p-1">
+      <section id="stays" className="mt-5 p-5 sm:p-1">
 
         <h2
           className="ml-5 sm:ml-0 mb-5 text-h2Size text-version1 font-bold"
