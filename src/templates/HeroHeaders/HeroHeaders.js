@@ -47,6 +47,7 @@ function HeroHeaders({ h1_title, imageHeader }) {
           src={imageHeader}
           layout="fill"
           className="object-cover object-center"
+          priority
         />
       </div>
     </section>
